@@ -37,7 +37,10 @@ number.
 
 
 """,
-    'depends': ['base', 'sale_landed_costs', 'analytic'],
+    'depends': ['base', 
+                'sale_landed_costs', 
+                'purchase_landed_costs',
+                'analytic'],
     'data': [
 
     ],
