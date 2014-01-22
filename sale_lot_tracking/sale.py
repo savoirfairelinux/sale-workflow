@@ -71,7 +71,7 @@ class sale_order(orm.Model):
 
                 if order_cost.price_type == 'per_unit':
                     factor = float(sale_order_line.product_uom_qty) / sale_order_line.order_id.quantity_total
-                        
+                    
                 elif order_cost.price_type == 'value':
                     factor = float(sale_order_line.price_subtotal) / sale_order_line.order_id.amount_total
 
@@ -87,27 +87,36 @@ class sale_order(orm.Model):
                 # trouver le compte analytique
                 # FIXME: ne pas uniquement regarder la quantité
 
-                matching_line = [
+
+
+                # répercuter sur l'ensemble des lots 
+
+                matching_lines = [
                     line
                     for line in stock_move_lines
-                    if line.product_qty == sale_order_line.product_uom_qty
-                    and line.product_id.id == sale_order_line.product_id.id
-                ][0]
+                    if line.product_id.id == sale_order_line.product_id.id
+                ]
 
-                # fractionner les coûts
+                import pdb; pdb.set_trace()
 
-                vals_line = {
-                    'product_id': order_cost.product_id.id,
-                    'name': order_cost.product_id.name,
-                    'account_id': self._get_product_account_expense_id(order_cost.product_id),
-                    'partner_id': order_cost.partner_id.id,
-                    'invoice_id': inv_id,
-                    'price_unit': amount,
-                    'account_analytic_id': matching_line.prodlot_id.account_analytic_id.id,
-                    'invoice_line_tax_id': [(6, 0, [x.id for x in order_cost.product_id.supplier_taxes_id])]
-                }
+                for line in matching_lines:
+                    total_product = sum(l.product_qty for l in matching_lines)
+                    amount_line = amount * (line.product_qty / total_product)
+                    
+                    # fractionner les coûts
 
-                invoice_line_obj.create(cr, uid, vals_line, context=None)
+                    vals_line = {
+                        'product_id': order_cost.product_id.id,
+                        'name': order_cost.product_id.name,
+                        'account_id': self._get_product_account_expense_id(order_cost.product_id),
+                        'partner_id': order_cost.partner_id.id,
+                        'invoice_id': inv_id,
+                        'price_unit': amount,
+                        'account_analytic_id': line.prodlot_id.account_analytic_id.id,
+                        'invoice_line_tax_id': [(6, 0, [x.id for x in order_cost.product_id.supplier_taxes_id])]
+                    }
+
+                    invoice_line_obj.create(cr, uid, vals_line, context=None)
 
 
 
