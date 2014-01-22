@@ -97,8 +97,6 @@ class sale_order(orm.Model):
                     if line.product_id.id == sale_order_line.product_id.id
                 ]
 
-                import pdb; pdb.set_trace()
-
                 for line in matching_lines:
                     total_product = sum(l.product_qty for l in matching_lines)
                     amount_line = amount * (line.product_qty / total_product)
