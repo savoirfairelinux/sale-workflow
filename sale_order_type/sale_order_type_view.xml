@@ -1,0 +1,99 @@
+<openerp>
+  <data>
+    <!--  sale journal invoice Type's Form  view -->
+
+    <record model="ir.ui.view" id="view_sale_order_type_form">
+      <field name="name">sale.order.type.form</field>
+      <field name="model">sale.order.type</field>
+      <field name="arch" type="xml">
+        <form string="Sale Order Type">
+          <group col="4">
+            <field name="name"/>
+            <field name="active"/>
+          </group>
+          <separator string="Notes"/>
+          <field name="note"/>
+        </form>
+      </field>
+    </record>
+
+    <!--  sale journal invoice Type's tree  view -->
+
+    <record model="ir.ui.view" id="view_sale_order_type_tree">
+      <field name="name">sale.order.type.tree</field>
+      <field name="model">sale.order.type</field>
+      <field name="arch" type="xml">
+        <tree string="Sale Order Type">
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <!-- Action for sale journal invoice Type -->
+
+    <record model="ir.actions.act_window" id="action_definition_order_type">
+      <field name="name">Sale Order Types</field>
+      <field name="res_model">sale.order.type</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help"></field>
+    </record>
+
+    <menuitem id="menu_definition_order_type" sequence="15"
+              parent="base.menu_base_config"
+              action="action_definition_order_type"/>
+
+    <!-- Inherit sales order form view -->
+
+    <record model="ir.ui.view" id="sale_order_type_sale_order_form">
+      <field name="name">sale.order.type.sale.order.view.form</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form"/>
+      <field name="arch" type="xml">
+        <field name="client_order_ref" position="after">
+          <field name="sale_order_type_id"/>
+        </field>
+      </field>
+    </record>
+
+    <!-- Inherit sales order tree view-->
+
+    <record model="ir.ui.view" id="sale_order_type_sale_order_tree">
+      <field name="name">sale.order.type.sale.order.view.tree</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_tree"/>
+      <field name="arch" type="xml">
+        <field name="state" position="before">
+          <field name="sale_order_type_id"/>
+        </field>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="sale_order_type_sale_order_quotation_tree">
+      <field name="name">sale.order.type.quotation.view.tree</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_quotation_tree"/>
+      <field name="arch" type="xml">
+        <field name="state" position="before">
+          <field name="sale_order_type_id"/>
+        </field>
+      </field>
+    </record>
+
+    <record id="view_sales_order_type_search" model="ir.ui.view">
+      <field name="name">sale.order.type.search.inherit</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+      <field name="arch" type="xml">
+        <xpath expr="//group/filter[@string='Customer']" position="after">
+          <filter string="Sale Order Type" domain="[]"
+                  context="{'group_by':'sale_order_type_id'}"/>
+        </xpath>
+        <field name="project_id" position="after">
+          <field name="sale_order_type_id"/>
+        </field>
+      </field>
+    </record>
+
+  </data>
+</openerp>
