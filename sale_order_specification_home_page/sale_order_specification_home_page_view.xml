@@ -1,0 +1,24 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data>
+
+        <record id="sale_order_specification_social_view" model="ir.ui.view">
+            <field name="name">sale.order.specification.social.view</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <page string="Other Information" position="after">
+                    <page string="Home Page">
+                        <h3>Welcome</h3>
+                        <hr/>
+                        <div>
+                            <field name="phone_number" placeholder="Phone number"/>
+                            <field name="welcome_notes" />
+                        </div>
+                    </page>
+                </page>
+            </field>
+        </record>
+    </data>
+</openerp>
