@@ -58,12 +58,13 @@ More informations
     'data': [
         'security/ir.model.access.csv',
         'sale_order_type_view.xml',
-        'sale_order_type_data_demo.xml',
     ],
     'external_dependencies': {
         'python': [],
     },
-    'demo': [],
+    'demo': [
+        'sale_order_type_data_demo.xml',
+    ],
     'test': [],
     'installable': True,
 }
