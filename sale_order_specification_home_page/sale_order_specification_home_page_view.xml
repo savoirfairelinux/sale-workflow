@@ -10,7 +10,7 @@
             <field name="arch" type="xml">
                 <page string="Other Information" position="after">
                     <page string="Home Page">
-                        <h3>Welcome</h3>
+                        <h3>Home Page</h3>
                         <hr/>
                         <div>
                             <field name="phone_number" placeholder="Phone number"/>
