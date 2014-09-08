@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<openerp>
+  <data>
+
+    <record id="view_sales_order_filter_partner_rank" model="ir.ui.view">
+      <field name="name">sale.order.list.select.partner.rank</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_sales_order_filter" />
+      <field name="arch" type="xml">
+        <xpath expr="//group[@string='Group By...']" position="inside">
+          <filter string="Rank" domain="[]" context="{'group_by': 'rank_id'}" />
+        </xpath>
+      </field>
+    </record>
+
+
+  </data>
+</openerp>
+
