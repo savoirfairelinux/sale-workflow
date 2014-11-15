@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record id="action_sale_order_line_product_selection" model="ir.actions.act_window">
+      <field name="name">Add Lines</field>
+      <field name="res_model">product.selection</field>
+      <field name="view_type">form</field>
+      <field name="view_mode">form</field>
+      <field name="context">{'default_partner_id': default_partner_id, 'default_pricelist_id': default_pricelist_id}</field>
+      <field name="target">new</field>
+    </record>
+
+    <record id="view_order_form" model="ir.ui.view">
+      <field name="name">sale.order.addline.form</field>
+      <field name="model">sale.order</field>
+      <field name="inherit_id" ref="sale.view_order_form" />
+      <field name="arch" type="xml">
+        <h1 position="before">
+          <div class="oe_right oe_button_box" style="width: 300px;" name="buttons">
+            <button 
+                class="oe_inline oe_stat_button"
+                name="%(action_sale_order_line_product_selection)s"
+                type="action"
+                icon="fa-flask"
+                context="{'default_partner_id': partner_id, 'default_pricelist_id': pricelist_id}"
+                string="Add Lines" />
+          </div>
+        </h1>
+      </field>
+    </record>
+  </data>
+</openerp>

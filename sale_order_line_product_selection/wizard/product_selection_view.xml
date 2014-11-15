@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record id="view_product_selection_form" model="ir.ui.view">
+      <field name="name">product.selection.form</field>
+      <field name="model">product.selection</field>
+      <field name="arch" type="xml">
+        <form string="Product Selection Wizard">
+          <field name="partner_id" invisible="1" />
+          <field name="pricelist_id" invisible="1" />
+          <group colspan="4" col="5">
+            <group col="1">
+              <label string="Brand"/>
+              <field name="brand_id" nolabel="1" boilerplate="Brand"/>
+            </group>
+            <group col="1">
+              <label string="Model"/>
+              <field name="model_id" nolabel="1" domain="[('brand_id', '=', brand_id)]"/>
+            </group>
+            <group col="1">
+              <label string="Year"/>
+              <field name="year" nolabel="1"/>
+            </group>
+            <group col="1">
+              <label string="Cylinders"/>
+              <field name="cylinder_id" nolabel="1"/>
+            </group>
+            <group col="1">
+              <label string="Litre"/>
+              <field name="litre_id" nolabel="1"/>
+            </group>
+          </group>
+          <group colspan="4">
+            <field name="engine_code" />
+            <field name="default_code" />
+          </group>
+          <group>
+            <group>
+              <field name="a_t"/>
+              <field name="m_t"/>
+              <group colspan="2"/>
+              <field name="direct_fit_radiator_side_precat_left_side" />
+              <field name="direct_fit_radiator_side_precat_right_side" />
+              <group colspan="2"/>
+              <field name="dohc" />
+              <field name="shoc" />
+              <group colspan="2"/>
+              <field name="converter_wmanifold" />
+            </group>
+            <group>
+              <field name="super_duty" />
+              <field name="b2x4" />
+              <field name="b4x4" />
+              <group colspan="2"/>
+              <field name="awd" />
+              <field name="fwd" />
+              <group colspan="2"/>
+              <field name="b2doors" />
+              <field name="b4doors" />
+              <group colspan="2"/>
+              <field name="emission_federal" />
+              <field name="emission_californien" />
+            </group>
+          </group>
+          <button name="update" string="(Update)" type="object" class="oe_link"/>
+          <field name="product_selection_line_ids">
+            <tree editable="top" create="0">
+              <field name="is_selected" />
+              <field name="product_id" readonly="1" />
+              <field name="default_code" readonly="1" />
+              <field name="standard_price" readonly="1" />
+              <field name="list_price" readonly="1" />
+            </tree>
+          </field>
+          <footer>
+            <button name="confirm" string="Confirm" type="object" class="oe_highlight"/>
+            or
+            <button string="Cancel" class="oe_link" special="cancel" />
+          </footer>
+        </form>
+      </field>
+    </record>
+  </data>
+</openerp>
