@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record id="v4" model="fleet.vehicle.cylinder">
+      <field name="name">V4</field>
+    </record>
+    <record id="v5" model="fleet.vehicle.cylinder">
+      <field name="name">V5</field>
+    </record>
+    <record id="v6" model="fleet.vehicle.cylinder">
+      <field name="name">V6</field>
+    </record>
+    <record id="v8" model="fleet.vehicle.cylinder">
+      <field name="name">V8</field>
+    </record>
+    <record id="v10" model="fleet.vehicle.cylinder">
+      <field name="name">V10</field>
+    </record>
+    <record id="v12" model="fleet.vehicle.cylinder">
+      <field name="name">V12</field>
+    </record>
+    <record id="v14" model="fleet.vehicle.cylinder">
+      <field name="name">V14</field>
+    </record>
+    <record id="v16" model="fleet.vehicle.cylinder">
+      <field name="name">V16</field>
+    </record>
+    <record id="v18" model="fleet.vehicle.cylinder">
+      <field name="name">V18</field>
+    </record>
+    <record id="v20" model="fleet.vehicle.cylinder">
+      <field name="name">V20</field>
+    </record>
+  </data>
+</openerp>
+

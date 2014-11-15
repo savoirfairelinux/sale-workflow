@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record id="l10" model="fleet.vehicle.litre">
+      <field name="name">L1.0</field>
+    </record>
+    <record id="l11" model="fleet.vehicle.litre">
+      <field name="name">L1.1</field>
+    </record>
+    <record id="l12" model="fleet.vehicle.litre">
+      <field name="name">L1.2</field>
+    </record>
+    <record id="l13" model="fleet.vehicle.litre">
+      <field name="name">L1.3</field>
+    </record>
+    <record id="l14" model="fleet.vehicle.litre">
+      <field name="name">L1.4</field>
+    </record>
+    <record id="l15" model="fleet.vehicle.litre">
+      <field name="name">L1.5</field>
+    </record>
+    <record id="l16" model="fleet.vehicle.litre">
+      <field name="name">L1.6</field>
+    </record>
+    <record id="l17" model="fleet.vehicle.litre">
+      <field name="name">L1.7</field>
+    </record>
+    <record id="l18" model="fleet.vehicle.litre">
+      <field name="name">L1.8</field>
+    </record>
+    <record id="l19" model="fleet.vehicle.litre">
+      <field name="name">L1.9</field>
+    </record>
+    <record id="l20" model="fleet.vehicle.litre">
+      <field name="name">L2.0</field>
+    </record>
+    <record id="l21" model="fleet.vehicle.litre">
+      <field name="name">L2.1</field>
+    </record>
+    <record id="l22" model="fleet.vehicle.litre">
+      <field name="name">L2.2</field>
+    </record>
+    <record id="l23" model="fleet.vehicle.litre">
+      <field name="name">L2.3</field>
+    </record>
+    <record id="l24" model="fleet.vehicle.litre">
+      <field name="name">L2.4</field>
+    </record>
+    <record id="l25" model="fleet.vehicle.litre">
+      <field name="name">L2.5</field>
+    </record>
+    <record id="l26" model="fleet.vehicle.litre">
+      <field name="name">L2.6</field>
+    </record>
+    <record id="l27" model="fleet.vehicle.litre">
+      <field name="name">L2.7</field>
+    </record>
+    <record id="l28" model="fleet.vehicle.litre">
+      <field name="name">L2.8</field>
+    </record>
+    <record id="l29" model="fleet.vehicle.litre">
+      <field name="name">L2.9</field>
+    </record>
+    <record id="l30" model="fleet.vehicle.litre">
+      <field name="name">L3.0</field>
+    </record>
+    <record id="l21" model="fleet.vehicle.litre">
+      <field name="name">L3.1</field>
+    </record>
+  </data>
+</openerp>

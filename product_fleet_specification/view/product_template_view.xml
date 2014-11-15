@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record id="product_template_form_view" model="ir.ui.view">
+      <field name="name">product.template.common.form</field>
+      <field name="model">product.template</field>
+      <field name="inherit_id" ref="product.product_template_form_view" />
+      <field name="arch" type="xml">
+        <data>
+          <page string="Information" position="after">
+            <page string="Specification">
+              <field name="product_fleet_spec_ids">
+                <tree editable="botton">
+                  <field name="brand_id" />
+                  <field name="model_id" domain="[('brand_id', '=', brand_id)]"/>
+                  <field name="year" />
+                  <field name="cylinder_id" />
+                  <field name="litre_id" />
+                </tree>
+              </field>
+              <group colspan="4">
+                <field name="engine_code" />
+              </group>
+              <group>
+                <group>
+                  <field name="a_t"/>
+                  <field name="m_t"/>
+                  <group colspan="2"/>
+                  <field name="y_pipe" />
+                  <group colspan="2"/>
+                  <field name="direct_fit_radiator_side_precat_left_side" />
+                  <field name="direct_fit_radiator_side_precat_right_side" />
+                  <group colspan="2"/>
+                  <field name="dohc" />
+                  <field name="shoc" />
+                  <group colspan="2"/>
+                  <field name="converter_wmanifold" />
+                  <group colspan="2"/>
+                  <field name="super_duty" />
+                  <field name="b2x4" />
+                  <field name="b4x4" />
+                  <group colspan="2"/>
+                  <field name="awd" />
+                  <field name="fwd" />
+                </group>
+                <group>
+                  <field name="b2doors" />
+                  <field name="b4doors" />
+                  <group colspan="2"/>
+                  <field name="emission_federal" />
+                  <field name="emission_californien" />
+                  <group colspan="2"/>
+                  <field name="exc_calif" />
+                  <group colspan="2"/>
+                  <field name="w_02" />
+                  <field name="w_out" />
+                  <group colspan="2"/>
+                  <field name="semi_direct_fit" />
+                  <group colspan="2"/>
+                  <field name="catalyser2" />
+                  <field name="catalyser3" />
+                  <field name="catalyser4" />
+                </group>
+              </group>
+            </page>
+          </page>
+        </data>
+      </field>
+    </record>
+  </data>
+</openerp>
