@@ -30,7 +30,7 @@ Product Fleet Specification
 ===========================
 
 This module creates a specification tab to the product form that allows
-users to add several fleet related attributes to products.
+users to add several fleet and catalyser related attributes to products.
 
 Contributors
 ------------
@@ -41,6 +41,7 @@ Contributors
     'license': 'AGPL-3',
     'depends': ['product', 'fleet'],
     'data': [
+        'security/ir.model.access.csv',
         'data/fleet_vehicle_cylinder_data.xml',
         'data/fleet_vehicle_litre_data.xml',
         'view/product_template_view.xml'
