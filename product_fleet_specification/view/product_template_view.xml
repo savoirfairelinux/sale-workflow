@@ -13,7 +13,8 @@
                 <tree editable="bottom">
                   <field name="brand_id" />
                   <field name="model_id" domain="[('brand_id', '=', brand_id)]" options="{'create_name_field': 'modelname'}" context="{'default_brand_id': brand_id}"/>
-                  <field name="year" />
+                  <field name="year_start" />
+                  <field name="year_end" />
                   <field name="cylinder_id" />
                   <field name="litre_id" />
                 </tree>

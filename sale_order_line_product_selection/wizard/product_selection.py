@@ -86,7 +86,21 @@ class product_selection(models.TransientModel):
                 query0.append(('brand_id', '=', self.brand_id.id))
 
             if self.year:
-                query0.append(('year', '=', self.year))
+                # either between year_start and year_end or equal to one if the
+                # other is not filled in
+                query0 += [
+                    '|',
+                    '&',
+                    ('year_start', '<=', self.year),
+                    ('year_end', '>=', self.year),
+                    '|',
+                    '&',
+                    ('year_start', '=', self.year),
+                    ('year_end', '=', False),
+                    '&',
+                    ('year_start', '=', False),
+                    ('year_end', '=', self.year),
+                ]
 
             if self.cylinder_id:
                 query0.append(('cylinder_id', '=', self.cylinder_id.id))
