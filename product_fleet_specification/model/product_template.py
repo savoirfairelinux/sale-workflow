@@ -20,10 +20,10 @@
 #
 ##############################################################################
 
-from openerp import models, fields, api
+from openerp import models, fields
 
 
-class product_template(models.Model):
+class ProductTemplate(models.Model):
 
     _inherit = 'product.template'
 

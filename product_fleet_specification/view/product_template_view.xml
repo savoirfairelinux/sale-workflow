@@ -10,7 +10,7 @@
           <page string="Information" position="after">
             <page string="Specification">
               <field name="product_fleet_spec_ids">
-                <tree editable="botton">
+                <tree editable="bottom">
                   <field name="brand_id" />
                   <field name="model_id" domain="[('brand_id', '=', brand_id)]"/>
                   <field name="year" />

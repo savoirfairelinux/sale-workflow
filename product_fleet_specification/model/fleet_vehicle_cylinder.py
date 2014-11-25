@@ -20,12 +20,13 @@
 #
 ##############################################################################
 
-from openerp import models, fields, api
+from openerp import models, fields
 
 
-class fleet_vehicle_cylinder(models.Model):
+class FleetVehicleCylinder(models.Model):
     """Fleet Vehicle Cylinder"""
 
     _name = 'fleet.vehicle.cylinder'
+    _description = __doc__
 
     name = fields.Char('Cylinder')

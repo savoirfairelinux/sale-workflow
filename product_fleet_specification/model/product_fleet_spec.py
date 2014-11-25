@@ -20,13 +20,14 @@
 #
 ##############################################################################
 
-from openerp import models, fields, api
+from openerp import models, fields
 
 
-class product_fleet_spec(models.Model):
+class ProductFleetSpec(models.Model):
     """Product Fleet Specification"""
 
     _name = 'product.fleet.spec'
+    _description = __doc__
 
     name = fields.Char('Name')
     product_id = fields.Many2one('product.template', string='Product')
