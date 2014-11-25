@@ -113,7 +113,7 @@ class product_selection(models.TransientModel):
                 ('product_fleet_spec_ids.id', 'in', stage_1_ids.ids))
 
         if self.engine_code:
-            query.append(('engine_code', 'ilike', self.engine_code))
+            query.append(('engine_code.name', 'ilike', self.engine_code))
 
         if self.default_code:
             query.append(('default_code', 'ilike', self.default_code))

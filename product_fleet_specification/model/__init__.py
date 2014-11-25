@@ -22,5 +22,6 @@
 
 from . import fleet_vehicle_litre
 from . import fleet_vehicle_cylinder
+from . import fleet_vehicle_enginecode
 from . import product_template
 from . import product_fleet_spec

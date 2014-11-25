@@ -20,35 +20,13 @@
 #
 ##############################################################################
 
-{
-    'name': 'Product Fleet Specification',
-    'version': '1.0',
-    'category': 'Sale',
-    'summary': 'Product Fleet Specification',
-    'description': """
-Product Fleet Specification
-===========================
+from openerp import models, fields
 
-This module creates a specification tab to the product form that allows
-users to add several fleet and catalyser related attributes to products.
 
-Contributors
-------------
-* Joao Alfredo Gama Batista (joao.gama@savoirfairelinux.com)
-* Sandy Carter (sandy.carter@savoirfairelinux.com)
-""",
-    'author': 'Savoir-faire Linux',
-    'website': 'www.savoirfairelinux.com',
-    'license': 'AGPL-3',
-    'depends': ['product', 'fleet'],
-    'data': [
-        'security/ir.model.access.csv',
-        'data/fleet_vehicle_cylinder_data.xml',
-        'data/fleet_vehicle_litre_data.xml',
-        'view/product_template_view.xml'
-    ],
-    'test': [],
-    'demo': [],
-    'auto_install': False,
-    'installable': True,
-}
+class FleetVehicleEnginecode(models.Model):
+    """Fleet Vehicle Engine Code"""
+
+    _name = 'fleet.vehicle.enginecode'
+    _description = __doc__
+
+    name = fields.Char('Name', size=154)

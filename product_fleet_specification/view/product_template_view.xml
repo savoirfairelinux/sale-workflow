@@ -20,7 +20,7 @@
                 </tree>
               </field>
               <group colspan="4">
-                <field name="engine_code" />
+                <field name="engine_code" widget="many2many_tags"/>
               </group>
               <group>
                 <group>

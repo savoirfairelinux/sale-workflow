@@ -31,7 +31,10 @@ class ProductTemplate(models.Model):
         'product.fleet.spec',
         'product_id'
     )
-    engine_code = fields.Char(string='Engine Code', size=154)
+    engine_code = fields.Many2many(
+        'fleet.vehicle.enginecode',
+        string='Engine Code'
+    )
 
     a_t = fields.Boolean('A/T')
     m_t = fields.Boolean('M/T')
