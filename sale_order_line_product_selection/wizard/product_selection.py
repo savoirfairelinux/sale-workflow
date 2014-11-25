@@ -154,7 +154,7 @@ class product_selection(models.TransientModel):
                 ('emission_californien', '=', self.emission_californien)
             )
 
-        product_ids = self.env['product.template'].search(query)
+        product_ids = self.env['product.product'].search(query)
 
         if product_ids:
             vals = {

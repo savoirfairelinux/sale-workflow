@@ -39,7 +39,7 @@ class product_selection_line(models.TransientModel):
 
     product_selection_id = fields.Many2one('product.selection')
     is_selected = fields.Boolean('Selected')
-    product_id = fields.Many2one('product.template', string='Product')
+    product_id = fields.Many2one('product.product', string='Product')
     pricelist_id = fields.Many2one('product.pricelist')
     default_code = fields.Char(related='product_id.default_code', store=True)
     standard_price = fields.Float(
