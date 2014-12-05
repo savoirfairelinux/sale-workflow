@@ -36,21 +36,30 @@ class ProductTemplate(models.Model):
         string='Engine Code'
     )
 
+    back = fields.Boolean('Back')
+    front = fields.Boolean('Front')
+    
+    left = fields.Boolean('Left')
+    right = fields.Boolean('Right')
+    
     a_t = fields.Boolean('A/T')
     m_t = fields.Boolean('M/T')
 
     y_pipe = fields.Boolean('Y-pipe')
+    
+    direct_fit = fields.Boolean('Direct fit')
 
-    direct_fit_radiator_side_precat_left_side = fields.Boolean(
-        'Direct fit radiator side precat LEFT side')
-    direct_fit_radiator_side_precat_right_side = fields.Boolean(
-        'Direct fit radiator side precat RIGHT side')
+    radiator_side = fields.Boolean(
+        'Radiator side')
+    firebreak_side = fields.Boolean(
+        'Firebreak side')
 
     dohc = fields.Boolean('DOHC')
     shoc = fields.Boolean('SHOC')
 
-    converter_wmanifold = fields.Boolean('Converter W/Manifold')
-
+    manifold_with_catalyzer = fields.Boolean('Manifold with catalyzer')
+    manifold_alone = fields.Boolean('Manifold alone')
+    
     super_duty = fields.Boolean('Super Duty')
     b2x4 = fields.Boolean('2X4')
     b4x4 = fields.Boolean('4X4')

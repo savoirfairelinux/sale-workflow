@@ -36,16 +36,23 @@
           </group>
           <group>
             <group>
+              <field name="back"/>
+              <field name="front"/>
+              <group colspan="2"/>
+              <field name="left"/>
+              <field name="right"/>
+              <group colspan="2"/>
               <field name="a_t"/>
               <field name="m_t"/>
               <group colspan="2"/>
-              <field name="direct_fit_radiator_side_precat_left_side" />
-              <field name="direct_fit_radiator_side_precat_right_side" />
+              <field name="manifold_with_catalyzer"/>
+              <field name="manifold_alone"/>
+              <group colspan="2"/>
+              <field name="radiator_side" />
+              <field name="firebreak_side" />
               <group colspan="2"/>
               <field name="dohc" />
               <field name="shoc" />
-              <group colspan="2"/>
-              <field name="converter_wmanifold" />
             </group>
             <group>
               <field name="super_duty" />

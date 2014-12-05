@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-17 04:54+0000\n"
-"PO-Revision-Date: 2014-11-17 04:54+0000\n"
+"POT-Creation-Date: 2014-12-05 22:05+0000\n"
+"PO-Revision-Date: 2014-12-05 22:05+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -57,6 +57,11 @@ msgid "Add Lines"
 msgstr ""
 
 #. module: sale_order_line_product_selection
+#: field:product.selection,back:0
+msgid "Back"
+msgstr ""
+
+#. module: sale_order_line_product_selection
 #: view:product.selection:sale_order_line_product_selection.view_product_selection_form
 #: field:product.selection,brand_id:0
 msgid "Brand"
@@ -70,11 +75,6 @@ msgstr ""
 #. module: sale_order_line_product_selection
 #: view:product.selection:sale_order_line_product_selection.view_product_selection_form
 msgid "Confirm"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,converter_wmanifold:0
-msgid "Converter W/Manifold"
 msgstr ""
 
 #. module: sale_order_line_product_selection
@@ -111,16 +111,6 @@ msgid "DOHC"
 msgstr ""
 
 #. module: sale_order_line_product_selection
-#: field:product.selection,direct_fit_radiator_side_precat_left_side:0
-msgid "Direct fit radiator side precat LEFT side"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,direct_fit_radiator_side_precat_right_side:0
-msgid "Direct fit radiator side precat RIGHT side"
-msgstr ""
-
-#. module: sale_order_line_product_selection
 #: field:product.selection,emission_californien:0
 msgid "Emission Californien"
 msgstr ""
@@ -138,6 +128,16 @@ msgstr ""
 #. module: sale_order_line_product_selection
 #: field:product.selection,fwd:0
 msgid "FWD"
+msgstr ""
+
+#. module: sale_order_line_product_selection
+#: field:product.selection,firebreak_side:0
+msgid "Firebreak side"
+msgstr ""
+
+#. module: sale_order_line_product_selection
+#: field:product.selection,front:0
+msgid "Front"
 msgstr ""
 
 #. module: sale_order_line_product_selection
@@ -165,6 +165,11 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: sale_order_line_product_selection
+#: field:product.selection,left:0
+msgid "Left"
+msgstr ""
+
+#. module: sale_order_line_product_selection
 #: view:product.selection:sale_order_line_product_selection.view_product_selection_form
 #: field:product.selection,litre_id:0
 msgid "Litre"
@@ -173,6 +178,16 @@ msgstr ""
 #. module: sale_order_line_product_selection
 #: field:product.selection,m_t:0
 msgid "M/T"
+msgstr ""
+
+#. module: sale_order_line_product_selection
+#: field:product.selection,manifold_alone:0
+msgid "Manifold alone"
+msgstr ""
+
+#. module: sale_order_line_product_selection
+#: field:product.selection,manifold_with_catalyzer:0
+msgid "Manifold with catalyzer"
 msgstr ""
 
 #. module: sale_order_line_product_selection
@@ -212,6 +227,16 @@ msgid "Product selection id"
 msgstr ""
 
 #. module: sale_order_line_product_selection
+#: field:product.selection,radiator_side:0
+msgid "Radiator side"
+msgstr ""
+
+#. module: sale_order_line_product_selection
+#: field:product.selection,right:0
+msgid "Right"
+msgstr ""
+
+#. module: sale_order_line_product_selection
 #: field:product.selection,shoc:0
 msgid "SHOC"
 msgstr ""
@@ -222,7 +247,7 @@ msgid "Search Result"
 msgstr ""
 
 #. module: sale_order_line_product_selection
-#: code:addons/sale_order_line_product_selection/wizard/product_selection.py:167
+#: code:addons/sale_order_line_product_selection/wizard/product_selection.py:203
 #, python-format
 msgid "Select products from the result list"
 msgstr ""
@@ -241,5 +266,10 @@ msgstr ""
 #: view:product.selection:sale_order_line_product_selection.view_product_selection_form
 #: field:product.selection,year:0
 msgid "Year"
+msgstr ""
+
+#. module: sale_order_line_product_selection
+#: view:product.selection:sale_order_line_product_selection.view_product_selection_form
+msgid "or"
 msgstr ""
 

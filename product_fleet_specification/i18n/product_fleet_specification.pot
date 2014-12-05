@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-17 04:46+0000\n"
-"PO-Revision-Date: 2014-11-17 04:46+0000\n"
+"POT-Creation-Date: 2014-12-05 21:51+0000\n"
+"PO-Revision-Date: 2014-12-05 21:51+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -46,6 +46,11 @@ msgid "AWD"
 msgstr ""
 
 #. module: product_fleet_specification
+#: field:product.template,back:0
+msgid "Back"
+msgstr ""
+
+#. module: product_fleet_specification
 #: field:product.fleet.spec,brand_id:0
 msgid "Brand"
 msgstr ""
@@ -66,12 +71,8 @@ msgid "Catalyser (4)"
 msgstr ""
 
 #. module: product_fleet_specification
-#: field:product.template,converter_wmanifold:0
-msgid "Converter W/Manifold"
-msgstr ""
-
-#. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,create_uid:0
+#: field:fleet.vehicle.enginecode,create_uid:0
 #: field:fleet.vehicle.litre,create_uid:0
 #: field:product.fleet.spec,create_uid:0
 msgid "Created by"
@@ -79,6 +80,7 @@ msgstr ""
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,create_date:0
+#: field:fleet.vehicle.enginecode,create_date:0
 #: field:fleet.vehicle.litre,create_date:0
 #: field:product.fleet.spec,create_date:0
 msgid "Created on"
@@ -96,13 +98,8 @@ msgid "DOHC"
 msgstr ""
 
 #. module: product_fleet_specification
-#: field:product.template,direct_fit_radiator_side_precat_left_side:0
-msgid "Direct fit radiator side precat LEFT side"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,direct_fit_radiator_side_precat_right_side:0
-msgid "Direct fit radiator side precat RIGHT side"
+#: field:product.template,direct_fit:0
+msgid "Direct fit"
 msgstr ""
 
 #. module: product_fleet_specification
@@ -121,6 +118,11 @@ msgid "Emission Federal"
 msgstr ""
 
 #. module: product_fleet_specification
+#: field:product.fleet.spec,year_end:0
+msgid "End Year"
+msgstr ""
+
+#. module: product_fleet_specification
 #: field:product.template,engine_code:0
 msgid "Engine Code"
 msgstr ""
@@ -131,7 +133,23 @@ msgid "FWD"
 msgstr ""
 
 #. module: product_fleet_specification
+#: field:product.template,firebreak_side:0
+msgid "Firebreak side"
+msgstr ""
+
+#. module: product_fleet_specification
+#: model:ir.model,name:product_fleet_specification.model_fleet_vehicle_enginecode
+msgid "Fleet Vehicle Engine Code"
+msgstr ""
+
+#. module: product_fleet_specification
+#: field:product.template,front:0
+msgid "Front"
+msgstr ""
+
+#. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,id:0
+#: field:fleet.vehicle.enginecode,id:0
 #: field:fleet.vehicle.litre,id:0
 #: field:product.fleet.spec,id:0
 msgid "ID"
@@ -144,6 +162,7 @@ msgstr ""
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,write_uid:0
+#: field:fleet.vehicle.enginecode,write_uid:0
 #: field:fleet.vehicle.litre,write_uid:0
 #: field:product.fleet.spec,write_uid:0
 msgid "Last Updated by"
@@ -151,9 +170,15 @@ msgstr ""
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,write_date:0
+#: field:fleet.vehicle.enginecode,write_date:0
 #: field:fleet.vehicle.litre,write_date:0
 #: field:product.fleet.spec,write_date:0
 msgid "Last Updated on"
+msgstr ""
+
+#. module: product_fleet_specification
+#: field:product.template,left:0
+msgid "Left"
 msgstr ""
 
 #. module: product_fleet_specification
@@ -167,11 +192,22 @@ msgid "M/T"
 msgstr ""
 
 #. module: product_fleet_specification
+#: field:product.template,manifold_alone:0
+msgid "Manifold alone"
+msgstr ""
+
+#. module: product_fleet_specification
+#: field:product.template,manifold_with_catalyzer:0
+msgid "Manifold with catalyzer"
+msgstr ""
+
+#. module: product_fleet_specification
 #: field:product.fleet.spec,model_id:0
 msgid "Model"
 msgstr ""
 
 #. module: product_fleet_specification
+#: field:fleet.vehicle.enginecode,name:0
 #: field:fleet.vehicle.litre,name:0
 #: field:product.fleet.spec,name:0
 msgid "Name"
@@ -193,6 +229,16 @@ msgid "Product fleet spec ids"
 msgstr ""
 
 #. module: product_fleet_specification
+#: field:product.template,radiator_side:0
+msgid "Radiator side"
+msgstr ""
+
+#. module: product_fleet_specification
+#: field:product.template,right:0
+msgid "Right"
+msgstr ""
+
+#. module: product_fleet_specification
 #: field:product.template,shoc:0
 msgid "SHOC"
 msgstr ""
@@ -205,6 +251,11 @@ msgstr ""
 #. module: product_fleet_specification
 #: view:product.template:product_fleet_specification.product_template_form_view
 msgid "Specification"
+msgstr ""
+
+#. module: product_fleet_specification
+#: field:product.fleet.spec,year_start:0
+msgid "Start Year"
 msgstr ""
 
 #. module: product_fleet_specification
@@ -225,10 +276,5 @@ msgstr ""
 #. module: product_fleet_specification
 #: field:product.template,y_pipe:0
 msgid "Y-pipe"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.fleet.spec,year:0
-msgid "Year"
 msgstr ""
 

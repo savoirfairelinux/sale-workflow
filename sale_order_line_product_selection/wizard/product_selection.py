@@ -37,19 +37,26 @@ class product_selection(models.TransientModel):
 
     engine_code = fields.Char(string='Engine Code', size=154)
     default_code = fields.Char(string='Internal Reference')
-
+    
+    back = fields.Boolean('Back')
+    front = fields.Boolean('Front')
+    
+    left = fields.Boolean('Left')
+    right = fields.Boolean('Right')
+    
     a_t = fields.Boolean('A/T')
     m_t = fields.Boolean('M/T')
 
-    direct_fit_radiator_side_precat_left_side = fields.Boolean(
-        'Direct fit radiator side precat LEFT side')
-    direct_fit_radiator_side_precat_right_side = fields.Boolean(
-        'Direct fit radiator side precat RIGHT side')
+    radiator_side = fields.Boolean(
+        'Radiator side')
+    firebreak_side = fields.Boolean(
+        'Firebreak side')
 
     dohc = fields.Boolean('DOHC')
     shoc = fields.Boolean('SHOC')
 
-    converter_wmanifold = fields.Boolean('Converter W/Manifold')
+    manifold_with_catalyzer = fields.Boolean('Manifold with catalyzer')
+    manifold_alone = fields.Boolean('Manifold alone')
 
     super_duty = fields.Boolean('Super Duty')
     b2x4 = fields.Boolean('2X4')
@@ -118,21 +125,29 @@ class product_selection(models.TransientModel):
         if self.default_code:
             query.append(('default_code', 'ilike', self.default_code))
 
+        if (self.back or self.front):
+            query.append(('back', '=', self.back))        
+            query.append(('front', '=', self.front))
+            
+        if (self.left or self.right):
+            query.append(('left', '=', self.left))
+            query.append(('right', '=', self.right))
+        
         if self.a_t:
             query.append(('a_t', '=', self.a_t))
 
         if self.m_t:
             query.append(('m_t', '=', self.m_t))
 
-        if (self.direct_fit_radiator_side_precat_left_side or
-                self.direct_fit_radiator_side_precat_right_side):
+        if (self.radiator_side or
+                self.firebreak_side):
             query.append(
-                ('direct_fit_radiator_side_precat_right_side', '=',
-                 self.direct_fit_radiator_side_precat_right_side)
+                ('radiator_side', '=',
+                 self.radiator_side)
             )
             query.append((
-                'direct_fit_radiator_side_precat_right_side', '=',
-                self.direct_fit_radiator_side_precat_right_side)
+                'firebreak_side', '=',
+                self.firebreak_side)
             )
 
         if self.dohc:
@@ -140,9 +155,16 @@ class product_selection(models.TransientModel):
         if self.shoc:
             query.append(('shoc', '=', self.shoc))
 
-        if self.converter_wmanifold:
+        if (self.manifold_with_catalyzer or
+                self.manifold_alone):
             query.append(
-                ('converter_wmanifold', '=', self.converter_wmanifold))
+                ('manifold_with_catalyzer', '=',
+                 self.manifold_with_catalyzer)
+            )
+            query.append((
+                'manifold_alone', '=',
+                self.manifold_alone)
+            )
 
         if self.super_duty:
             query.append(('super_duty', '=', self.super_duty))
