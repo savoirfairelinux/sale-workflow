@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <record id="fleet_vehicle_spec_list" model="ir.ui.view">
+      <field name="name">fleet.vehicle.spec.list</field>
+      <field name="model">fleet.vehicle.spec</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="category_id"/>
+        </tree>
+      </field>
+    </record>
+  </data>
+</openerp>

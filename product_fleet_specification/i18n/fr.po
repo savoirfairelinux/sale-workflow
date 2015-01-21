@@ -6,50 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-05 21:51+0000\n"
-"PO-Revision-Date: 2014-12-05 17:19-0500\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2015-01-21 19:38+0000\n"
+"PO-Revision-Date: 2015-01-21 14:44-0500\n"
+"Last-Translator: David Dufresne <david.dufresne@savoirfairelinux.com>\n"
 "Language-Team: Savoir-faire Linux <info@savoirfairelinux.com>\n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 1.5.4\n"
-"Language: fr\n"
-
-#. module: product_fleet_specification
-#: field:product.template,b2doors:0
-msgid "2 doors"
-msgstr "2 portes"
-
-#. module: product_fleet_specification
-#: field:product.template,b2x4:0
-msgid "2X4"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,b4doors:0
-msgid "4 doors"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,b4x4:0
-msgid "4X4"
-msgstr "4 portes"
-
-#. module: product_fleet_specification
-#: field:product.template,a_t:0
-msgid "A/T"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,awd:0
-msgid "AWD"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,back:0
-msgid "Back"
-msgstr "Arrière"
 
 #. module: product_fleet_specification
 #: field:product.fleet.spec,brand_id:0
@@ -57,24 +22,16 @@ msgid "Brand"
 msgstr "Marque"
 
 #. module: product_fleet_specification
-#: field:product.template,catalyser2:0
-msgid "Catalyser (2)"
-msgstr "Catalyseur (2)"
-
-#. module: product_fleet_specification
-#: field:product.template,catalyser3:0
-msgid "Catalyser (3)"
-msgstr "Catalyseur (3)"
-
-#. module: product_fleet_specification
-#: field:product.template,catalyser4:0
-msgid "Catalyser (4)"
-msgstr "Catalyseur (4)"
+#: field:fleet.vehicle.spec,category_id:0
+msgid "Category"
+msgstr "Catégorie"
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,create_uid:0
 #: field:fleet.vehicle.enginecode,create_uid:0
 #: field:fleet.vehicle.litre,create_uid:0
+#: field:fleet.vehicle.spec,create_uid:0
+#: field:fleet.vehicle.spec.category,create_uid:0
 #: field:product.fleet.spec,create_uid:0
 msgid "Created by"
 msgstr "Créé par"
@@ -83,6 +40,8 @@ msgstr "Créé par"
 #: field:fleet.vehicle.cylinder,create_date:0
 #: field:fleet.vehicle.enginecode,create_date:0
 #: field:fleet.vehicle.litre,create_date:0
+#: field:fleet.vehicle.spec,create_date:0
+#: field:fleet.vehicle.spec.category,create_date:0
 #: field:product.fleet.spec,create_date:0
 msgid "Created on"
 msgstr "Créé le"
@@ -93,49 +52,19 @@ msgid "Cylinder"
 msgstr "Cylindre"
 
 #. module: product_fleet_specification
-#: field:product.template,dohc:0
-msgid "DOHC"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,direct_fit:0
-msgid "Direct fit"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,exc_calif:0
-msgid "EXC CALIF"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,emission_californien:0
-msgid "Emission Californien"
-msgstr "Émission Californien"
-
-#. module: product_fleet_specification
-#: field:product.template,emission_federal:0
-msgid "Emission Federal"
-msgstr "Émission Fédérale"
-
-#. module: product_fleet_specification
 #: field:product.fleet.spec,year_end:0
 msgid "End Year"
 msgstr "Année fin"
 
 #. module: product_fleet_specification
-#: field:product.template,engine_code:0
+#: field:product.fleet.spec,engine_code_id:0
 msgid "Engine Code"
 msgstr "Code moteur"
 
 #. module: product_fleet_specification
-#: field:product.template,fwd:0
-msgid "FWD"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,firebreak_side:0
-msgid "Firebreak side"
-msgstr "Côté par-feu"
+#: model:ir.model,name:product_fleet_specification.model_fleet_vehicle_cylinder
+msgid "Fleet Vehicle Cylinder"
+msgstr "Cylindre de véhicule"
 
 #. module: product_fleet_specification
 #: model:ir.model,name:product_fleet_specification.model_fleet_vehicle_enginecode
@@ -143,60 +72,60 @@ msgid "Fleet Vehicle Engine Code"
 msgstr "Code moteur de la flotte de véhicule"
 
 #. module: product_fleet_specification
-#: field:product.template,front:0
-msgid "Front"
-msgstr "Avant"
+#: model:ir.model,name:product_fleet_specification.model_fleet_vehicle_litre
+msgid "Fleet Vehicle Litre"
+msgstr "Consommation d'un véhicule"
+
+#. module: product_fleet_specification
+#: model:ir.model,name:product_fleet_specification.model_fleet_vehicle_spec
+msgid "Fleet Vehicle Specification"
+msgstr "Spécification de flotte de véhicules"
+
+#. module: product_fleet_specification
+#: model:ir.model,name:product_fleet_specification.model_fleet_vehicle_spec_category
+msgid "Fleet Vehicle Specification Category"
+msgstr "Catégorie de spécification de flotte de véhicules"
+
+#. module: product_fleet_specification
+#: field:product.template,global_spec_ids:0
+msgid "Global Specifications"
+msgstr "Spécifications globales"
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,id:0 field:fleet.vehicle.enginecode,id:0
-#: field:fleet.vehicle.litre,id:0 field:product.fleet.spec,id:0
+#: field:fleet.vehicle.litre,id:0 field:fleet.vehicle.spec,id:0
+#: field:fleet.vehicle.spec.category,id:0 field:product.fleet.spec,id:0
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: product_fleet_specification
 #: view:product.template:product_fleet_specification.product_template_form_view
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,write_uid:0
 #: field:fleet.vehicle.enginecode,write_uid:0
-#: field:fleet.vehicle.litre,write_uid:0 field:product.fleet.spec,write_uid:0
+#: field:fleet.vehicle.litre,write_uid:0 field:fleet.vehicle.spec,write_uid:0
+#: field:fleet.vehicle.spec.category,write_uid:0
+#: field:product.fleet.spec,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Dernière mise-à-jour effectuée par"
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,write_date:0
 #: field:fleet.vehicle.enginecode,write_date:0
 #: field:fleet.vehicle.litre,write_date:0
+#: field:fleet.vehicle.spec,write_date:0
+#: field:fleet.vehicle.spec.category,write_date:0
 #: field:product.fleet.spec,write_date:0
 msgid "Last Updated on"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,left:0
-msgid "Left"
-msgstr "Gauche"
+msgstr "Dernière mise-à-jour effectuée le"
 
 #. module: product_fleet_specification
 #: field:product.fleet.spec,litre_id:0
 msgid "Litre"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,m_t:0
-msgid "M/T"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,manifold_alone:0
-msgid "Manifold alone"
-msgstr "Collecteur d'échappement seul"
-
-#. module: product_fleet_specification
-#: field:product.template,manifold_with_catalyzer:0
-msgid "Manifold with catalyzer"
-msgstr "Collecteur d'échappement W/ catalyseur "
+msgstr "Litre"
 
 #. module: product_fleet_specification
 #: field:product.fleet.spec,model_id:0
@@ -205,6 +134,7 @@ msgstr "Modèle"
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.enginecode,name:0 field:fleet.vehicle.litre,name:0
+#: field:fleet.vehicle.spec,name:0 field:fleet.vehicle.spec.category,name:0
 #: field:product.fleet.spec,name:0
 msgid "Name"
 msgstr "Nom"
@@ -215,34 +145,19 @@ msgid "Product"
 msgstr "Produit"
 
 #. module: product_fleet_specification
+#: model:ir.model,name:product_fleet_specification.model_product_fleet_spec
+msgid "Product Fleet Specification"
+msgstr "Spécification de flotte de véhicules"
+
+#. module: product_fleet_specification
+#: model:ir.model,name:product_fleet_specification.model_product_fleet_feature
+msgid "Product Fleet Specification Tag"
+msgstr "Étiquette de spécification de flotte"
+
+#. module: product_fleet_specification
 #: model:ir.model,name:product_fleet_specification.model_product_template
 msgid "Product Template"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,product_fleet_spec_ids:0
-msgid "Product fleet spec ids"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,radiator_side:0
-msgid "Radiator side"
-msgstr "Côté radiateur"
-
-#. module: product_fleet_specification
-#: field:product.template,right:0
-msgid "Right"
-msgstr "Droite"
-
-#. module: product_fleet_specification
-#: field:product.template,shoc:0
-msgid "SHOC"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,semi_direct_fit:0
-msgid "Semi direct fit"
-msgstr ""
+msgstr "Produit"
 
 #. module: product_fleet_specification
 #: view:product.template:product_fleet_specification.product_template_form_view
@@ -255,21 +170,56 @@ msgid "Start Year"
 msgstr "Année début"
 
 #. module: product_fleet_specification
-#: field:product.template,super_duty:0
-msgid "Super Duty"
-msgstr ""
+#: field:product.fleet.spec,spec_ids:0
+msgid "Vehicle Specification"
+msgstr "Spécifications du véhicule"
 
 #. module: product_fleet_specification
-#: field:product.template,w_02:0
-msgid "W/02"
-msgstr ""
+#: field:product.template,product_fleet_spec_ids:0
+msgid "Vehicles"
+msgstr "Véhicules"
 
-#. module: product_fleet_specification
-#: field:product.template,w_out:0
-msgid "W/OUT"
-msgstr ""
+#~ msgid "2 doors"
+#~ msgstr "2 portes"
 
-#. module: product_fleet_specification
-#: field:product.template,y_pipe:0
-msgid "Y-pipe"
-msgstr ""
+#~ msgid "4X4"
+#~ msgstr "4 portes"
+
+#~ msgid "Back"
+#~ msgstr "Arrière"
+
+#~ msgid "Catalyser (2)"
+#~ msgstr "Catalyseur (2)"
+
+#~ msgid "Catalyser (3)"
+#~ msgstr "Catalyseur (3)"
+
+#~ msgid "Catalyser (4)"
+#~ msgstr "Catalyseur (4)"
+
+#~ msgid "Emission Californien"
+#~ msgstr "Émission Californien"
+
+#~ msgid "Emission Federal"
+#~ msgstr "Émission Fédérale"
+
+#~ msgid "Firebreak side"
+#~ msgstr "Côté par-feu"
+
+#~ msgid "Front"
+#~ msgstr "Avant"
+
+#~ msgid "Left"
+#~ msgstr "Gauche"
+
+#~ msgid "Manifold alone"
+#~ msgstr "Collecteur d'échappement seul"
+
+#~ msgid "Manifold with catalyzer"
+#~ msgstr "Collecteur d'échappement W/ catalyseur "
+
+#~ msgid "Radiator side"
+#~ msgstr "Côté radiateur"
+
+#~ msgid "Right"
+#~ msgstr "Droite"

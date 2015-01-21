@@ -36,6 +36,7 @@ Contributors
 ------------
 * Joao Alfredo Gama Batista (joao.gama@savoirfairelinux.com)
 * Sandy Carter (sandy.carter@savoirfairelinux.com)
+* David Dufresne (david.dufresne@savoirfairelinux.com)
 """,
     'author': 'Savoir-faire Linux',
     'website': 'www.savoirfairelinux.com',
@@ -45,7 +46,8 @@ Contributors
         'security/ir.model.access.csv',
         'data/fleet_vehicle_cylinder_data.xml',
         'data/fleet_vehicle_litre_data.xml',
-        'view/product_template_view.xml'
+        'view/product_template_view.xml',
+        'view/fleet_vehicle_spec_view.xml',
     ],
     'test': [],
     'demo': [],

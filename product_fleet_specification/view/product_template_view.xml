@@ -9,68 +9,26 @@
         <data>
           <page string="Information" position="after">
             <page string="Specification">
+              <label for="product_fleet_spec_ids"/>
               <field name="product_fleet_spec_ids">
                 <tree editable="bottom">
                   <field name="brand_id" />
                   <field name="model_id" domain="[('brand_id', '=', brand_id)]" options="{'create_name_field': 'modelname'}" context="{'default_brand_id': brand_id}"/>
                   <field name="year_start" />
                   <field name="year_end" />
+                  <field name="spec_ids" widget="many2many_tags"/>
                   <field name="cylinder_id" />
                   <field name="litre_id" />
+                  <field name="engine_code_id"/>
                 </tree>
               </field>
-              <group colspan="4">
-                <field name="engine_code" widget="many2many_tags"/>
-              </group>
-              <group>
-                <group>
-                  <field name="back"/>
-                  <field name="front"/>
-                  <group colspan="2"/>
-                  <field name="left"/>
-                  <field name="right"/>
-                  <group colspan="2"/>
-                  <field name="a_t"/>
-                  <field name="m_t"/>
-                  <group colspan="2"/>
-                  <field name="y_pipe" />
-                  <group colspan="2"/>
-                  <field name="direct_fit" />
-                  <field name="radiator_side" />
-                  <field name="firebreak_side" />
-                  <group colspan="2"/>
-                  <field name="manifold_with_catalyzer"/>
-                  <field name="manifold_alone"/>
-                  <group colspan="2"/>
-                  <field name="dohc" />
-                  <field name="shoc" />
-                  <group colspan="2"/>
-                  <field name="awd" />
-                  <field name="fwd" />
-                </group>
-                <group>
-                  <field name="super_duty" />
-                  <field name="b2x4" />
-                  <field name="b4x4" />
-                  <group colspan="2"/>
-                  <field name="b2doors" />
-                  <field name="b4doors" />
-                  <group colspan="2"/>
-                  <field name="emission_federal" />
-                  <field name="emission_californien" />
-                  <group colspan="2"/>
-                  <field name="exc_calif" />
-                  <group colspan="2"/>
-                  <field name="w_02" />
-                  <field name="w_out" />
-                  <group colspan="2"/>
-                  <field name="semi_direct_fit" />
-                  <group colspan="2"/>
-                  <field name="catalyser2" />
-                  <field name="catalyser3" />
-                  <field name="catalyser4" />
-                </group>
-              </group>
+              <label for="global_spec_ids"/>
+              <field name="global_spec_ids">
+                <tree>
+                  <field name="name"/>
+                  <field name="category_id"/>
+                </tree>
+              </field>
             </page>
           </page>
         </data>

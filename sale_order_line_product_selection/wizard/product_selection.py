@@ -35,41 +35,15 @@ class product_selection(models.TransientModel):
     cylinder_id = fields.Many2one('fleet.vehicle.cylinder', string='Cylinders')
     litre_id = fields.Many2one('fleet.vehicle.litre', string='Litre')
 
-    engine_code = fields.Char(string='Engine Code', size=154)
+    engine_code_id = fields.Many2one(
+        'fleet.vehicle.enginecode',
+        string='Engine Code'
+    )
     default_code = fields.Char(string='Internal Reference')
-    
-    back = fields.Boolean('Back')
-    front = fields.Boolean('Front')
-    
-    left = fields.Boolean('Left')
-    right = fields.Boolean('Right')
-    
-    a_t = fields.Boolean('A/T')
-    m_t = fields.Boolean('M/T')
 
-    radiator_side = fields.Boolean(
-        'Radiator side')
-    firebreak_side = fields.Boolean(
-        'Firebreak side')
-
-    dohc = fields.Boolean('DOHC')
-    shoc = fields.Boolean('SHOC')
-
-    manifold_with_catalyzer = fields.Boolean('Manifold with catalyzer')
-    manifold_alone = fields.Boolean('Manifold alone')
-
-    super_duty = fields.Boolean('Super Duty')
-    b2x4 = fields.Boolean('2X4')
-    b4x4 = fields.Boolean('4X4')
-
-    awd = fields.Boolean('AWD')
-    fwd = fields.Boolean('FWD')
-
-    b2doors = fields.Boolean('2 doors')
-    b4doors = fields.Boolean('4 doors')
-
-    emission_federal = fields.Boolean('Emission Federal')
-    emission_californien = fields.Boolean('Emission Californien')
+    spec_ids = fields.Many2many(
+        'fleet.vehicle.spec',
+        string='Specifications')
 
     product_selection_line_ids = fields.One2many(
         'product.selection.line',
@@ -81,121 +55,60 @@ class product_selection(models.TransientModel):
     def update(self):
         self.write({'product_selection_line_ids': [(5, 0, 0)]})
 
-        query = []
-        if (self.model_id or self.brand_id or self.year or self.cylinder_id or
-                self.litre_id):
+        fleet_spec_ids = []
 
-            query0 = []
-            if self.model_id:
-                query0.append(('model_id', '=', self.model_id.id))
+        spec_query = []
 
-            if self.brand_id:
-                query0.append(('brand_id', '=', self.brand_id.id))
+        if self.model_id:
+            spec_query.append(('model_id', '=', self.model_id.id))
 
-            if self.year:
-                # either between year_start and year_end or equal to one if the
-                # other is not filled in
-                query0 += [
-                    '|',
-                    '&',
-                    ('year_start', '<=', self.year),
-                    ('year_end', '>=', self.year),
-                    '|',
-                    '&',
-                    ('year_start', '=', self.year),
-                    ('year_end', '=', False),
-                    '&',
-                    ('year_start', '=', False),
-                    ('year_end', '=', self.year),
-                ]
+        if self.brand_id:
+            spec_query.append(('brand_id', '=', self.brand_id.id))
 
-            if self.cylinder_id:
-                query0.append(('cylinder_id', '=', self.cylinder_id.id))
+        if self.year:
+            # either between year_start and year_end or equal to one if the
+            # other is not filled in
+            spec_query += [
+                '|',
+                '&',
+                ('year_start', '<=', self.year),
+                ('year_end', '>=', self.year),
+                '|',
+                '&',
+                ('year_start', '=', self.year),
+                ('year_end', '=', False),
+                '&',
+                ('year_start', '=', False),
+                ('year_end', '=', self.year),
+            ]
 
-            if self.litre_id:
-                query0.append(('litre_id', '=', self.litre_id.id))
+        if self.cylinder_id:
+            spec_query.append(('cylinder_id', '=', self.cylinder_id.id))
 
-            stage_1_ids = self.env['product.fleet.spec'].search(query0)
-            query.append(
-                ('product_fleet_spec_ids.id', 'in', stage_1_ids.ids))
+        if self.litre_id:
+            spec_query.append(('litre_id', '=', self.litre_id.id))
 
-        if self.engine_code:
-            query.append(('engine_code.name', 'ilike', self.engine_code))
+        if self.engine_code_id:
+            spec_query.append(
+                ('engine_code_id', 'in', [self.engine_code_id.id, False]))
+        else:
+            spec_query.append(
+                ('engine_code_id', '=', False))
 
-        if self.default_code:
-            query.append(('default_code', 'ilike', self.default_code))
+        fleet_spec_ids += {
+            spec.id for spec
+            in self.env['product.fleet.spec'].search(spec_query)
+            if (spec.spec_ids | spec.product_id.global_spec_ids)
+            & self.spec_ids == self.spec_ids
+        }
 
-        if (self.back or self.front):
-            query.append(('back', '=', self.back))        
-            query.append(('front', '=', self.front))
-            
-        if (self.left or self.right):
-            query.append(('left', '=', self.left))
-            query.append(('right', '=', self.right))
-        
-        if self.a_t:
-            query.append(('a_t', '=', self.a_t))
+        products = self.env['product.product'].search(
+            [('product_fleet_spec_ids.id', 'in', fleet_spec_ids)])
 
-        if self.m_t:
-            query.append(('m_t', '=', self.m_t))
-
-        if (self.radiator_side or
-                self.firebreak_side):
-            query.append(
-                ('radiator_side', '=',
-                 self.radiator_side)
-            )
-            query.append((
-                'firebreak_side', '=',
-                self.firebreak_side)
-            )
-
-        if self.dohc:
-            query.append(('dohc', '=', self.dohc))
-        if self.shoc:
-            query.append(('shoc', '=', self.shoc))
-
-        if (self.manifold_with_catalyzer or
-                self.manifold_alone):
-            query.append(
-                ('manifold_with_catalyzer', '=',
-                 self.manifold_with_catalyzer)
-            )
-            query.append((
-                'manifold_alone', '=',
-                self.manifold_alone)
-            )
-
-        if self.super_duty:
-            query.append(('super_duty', '=', self.super_duty))
-        if self.b2x4:
-            query.append(('b2x4', '=', self.b2x4))
-        if self.b4x4:
-            query.append(('b4x4', '=', self.b4x4))
-
-        if self.awd:
-            query.append(('awd', '=', self.awd))
-        if self.fwd:
-            query.append(('fwd', '=', self.fwd))
-
-        if self.b2doors:
-            query.append(('b2doors', '=', self.b2doors))
-        if self.b4doors:
-            query.append(('b4doors', '=', self.b4doors))
-
-        if self.emission_federal:
-            query.append(('emission_federal', '=', self.emission_federal))
-        if self.emission_californien:
-            query.append(
-                ('emission_californien', '=', self.emission_californien)
-            )
-
-        product_ids = self.env['product.product'].search(query)
-
-        if product_ids:
+        if products:
             vals = {
                 'product_selection_line_ids': [
-                    (0, 0, {'product_id': p}) for p in product_ids.ids]
+                    (0, 0, {'product_id': p}) for p in products.ids]
             }
             self.write(vals)
 

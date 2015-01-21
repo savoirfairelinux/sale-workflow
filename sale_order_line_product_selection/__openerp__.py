@@ -32,6 +32,7 @@ Sale Order Line Product Selection
 Contributors
 ------------
 * Joao Alfredo Gama Batista (joao.gama@savoirfairelinux.com)
+* David Dufresne (david.dufresne@savoirfairelinux.com)
 """,
     'author': 'Savoir-faire Linux',
     'website': 'www.savoirfairelinux.com',
