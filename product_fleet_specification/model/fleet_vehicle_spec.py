@@ -32,3 +32,5 @@ class FleetVehicleSpec(models.Model):
     name = fields.Char('Name')
     category_id = fields.Many2one(
         'fleet.vehicle.spec.category', string="Category", required=True)
+
+    _order = 'category_id,name'

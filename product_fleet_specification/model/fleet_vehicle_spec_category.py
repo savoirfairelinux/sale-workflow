@@ -30,3 +30,5 @@ class FleetVehicleSpecCategory(models.Model):
     _description = __doc__
 
     name = fields.Char('Name')
+
+    _order = 'name'
