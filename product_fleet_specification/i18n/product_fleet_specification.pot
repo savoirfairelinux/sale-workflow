@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-05 21:51+0000\n"
-"PO-Revision-Date: 2014-12-05 21:51+0000\n"
+"POT-Creation-Date: 2015-01-22 18:55+0000\n"
+"PO-Revision-Date: 2015-01-22 18:55+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,64 +16,21 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: product_fleet_specification
-#: field:product.template,b2doors:0
-msgid "2 doors"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,b2x4:0
-msgid "2X4"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,b4doors:0
-msgid "4 doors"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,b4x4:0
-msgid "4X4"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,a_t:0
-msgid "A/T"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,awd:0
-msgid "AWD"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,back:0
-msgid "Back"
-msgstr ""
-
-#. module: product_fleet_specification
 #: field:product.fleet.spec,brand_id:0
 msgid "Brand"
 msgstr ""
 
 #. module: product_fleet_specification
-#: field:product.template,catalyser2:0
-msgid "Catalyser (2)"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,catalyser3:0
-msgid "Catalyser (3)"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,catalyser4:0
-msgid "Catalyser (4)"
+#: field:fleet.vehicle.spec,category_id:0
+msgid "Category"
 msgstr ""
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,create_uid:0
 #: field:fleet.vehicle.enginecode,create_uid:0
 #: field:fleet.vehicle.litre,create_uid:0
+#: field:fleet.vehicle.spec,create_uid:0
+#: field:fleet.vehicle.spec.category,create_uid:0
 #: field:product.fleet.spec,create_uid:0
 msgid "Created by"
 msgstr ""
@@ -82,6 +39,8 @@ msgstr ""
 #: field:fleet.vehicle.cylinder,create_date:0
 #: field:fleet.vehicle.enginecode,create_date:0
 #: field:fleet.vehicle.litre,create_date:0
+#: field:fleet.vehicle.spec,create_date:0
+#: field:fleet.vehicle.spec.category,create_date:0
 #: field:product.fleet.spec,create_date:0
 msgid "Created on"
 msgstr ""
@@ -93,48 +52,24 @@ msgid "Cylinder"
 msgstr ""
 
 #. module: product_fleet_specification
-#: field:product.template,dohc:0
-msgid "DOHC"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,direct_fit:0
-msgid "Direct fit"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,exc_calif:0
-msgid "EXC CALIF"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,emission_californien:0
-msgid "Emission Californien"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,emission_federal:0
-msgid "Emission Federal"
-msgstr ""
-
-#. module: product_fleet_specification
 #: field:product.fleet.spec,year_end:0
 msgid "End Year"
 msgstr ""
 
 #. module: product_fleet_specification
-#: field:product.template,engine_code:0
+#: field:product.fleet.spec,engine_code_id:0
 msgid "Engine Code"
 msgstr ""
 
 #. module: product_fleet_specification
-#: field:product.template,fwd:0
-msgid "FWD"
+#: model:ir.actions.act_window,name:product_fleet_specification.fleet_vehicle_spec_action
+#: model:ir.ui.menu,name:product_fleet_specification.menu_fleet_vehicle_spec
+msgid "Fleet Specifications"
 msgstr ""
 
 #. module: product_fleet_specification
-#: field:product.template,firebreak_side:0
-msgid "Firebreak side"
+#: model:ir.model,name:product_fleet_specification.model_fleet_vehicle_cylinder
+msgid "Fleet Vehicle Cylinder"
 msgstr ""
 
 #. module: product_fleet_specification
@@ -143,14 +78,31 @@ msgid "Fleet Vehicle Engine Code"
 msgstr ""
 
 #. module: product_fleet_specification
-#: field:product.template,front:0
-msgid "Front"
+#: model:ir.model,name:product_fleet_specification.model_fleet_vehicle_litre
+msgid "Fleet Vehicle Litre"
+msgstr ""
+
+#. module: product_fleet_specification
+#: model:ir.model,name:product_fleet_specification.model_fleet_vehicle_spec
+msgid "Fleet Vehicle Specification"
+msgstr ""
+
+#. module: product_fleet_specification
+#: model:ir.model,name:product_fleet_specification.model_fleet_vehicle_spec_category
+msgid "Fleet Vehicle Specification Category"
+msgstr ""
+
+#. module: product_fleet_specification
+#: field:product.template,global_spec_ids:0
+msgid "Global Specifications"
 msgstr ""
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,id:0
 #: field:fleet.vehicle.enginecode,id:0
 #: field:fleet.vehicle.litre,id:0
+#: field:fleet.vehicle.spec,id:0
+#: field:fleet.vehicle.spec.category,id:0
 #: field:product.fleet.spec,id:0
 msgid "ID"
 msgstr ""
@@ -164,6 +116,8 @@ msgstr ""
 #: field:fleet.vehicle.cylinder,write_uid:0
 #: field:fleet.vehicle.enginecode,write_uid:0
 #: field:fleet.vehicle.litre,write_uid:0
+#: field:fleet.vehicle.spec,write_uid:0
+#: field:fleet.vehicle.spec.category,write_uid:0
 #: field:product.fleet.spec,write_uid:0
 msgid "Last Updated by"
 msgstr ""
@@ -172,33 +126,15 @@ msgstr ""
 #: field:fleet.vehicle.cylinder,write_date:0
 #: field:fleet.vehicle.enginecode,write_date:0
 #: field:fleet.vehicle.litre,write_date:0
+#: field:fleet.vehicle.spec,write_date:0
+#: field:fleet.vehicle.spec.category,write_date:0
 #: field:product.fleet.spec,write_date:0
 msgid "Last Updated on"
 msgstr ""
 
 #. module: product_fleet_specification
-#: field:product.template,left:0
-msgid "Left"
-msgstr ""
-
-#. module: product_fleet_specification
 #: field:product.fleet.spec,litre_id:0
 msgid "Litre"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,m_t:0
-msgid "M/T"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,manifold_alone:0
-msgid "Manifold alone"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,manifold_with_catalyzer:0
-msgid "Manifold with catalyzer"
 msgstr ""
 
 #. module: product_fleet_specification
@@ -209,6 +145,8 @@ msgstr ""
 #. module: product_fleet_specification
 #: field:fleet.vehicle.enginecode,name:0
 #: field:fleet.vehicle.litre,name:0
+#: field:fleet.vehicle.spec,name:0
+#: field:fleet.vehicle.spec.category,name:0
 #: field:product.fleet.spec,name:0
 msgid "Name"
 msgstr ""
@@ -219,33 +157,18 @@ msgid "Product"
 msgstr ""
 
 #. module: product_fleet_specification
+#: model:ir.model,name:product_fleet_specification.model_product_fleet_spec
+msgid "Product Fleet Specification"
+msgstr ""
+
+#. module: product_fleet_specification
+#: model:ir.model,name:product_fleet_specification.model_product_fleet_feature
+msgid "Product Fleet Specification Tag"
+msgstr ""
+
+#. module: product_fleet_specification
 #: model:ir.model,name:product_fleet_specification.model_product_template
 msgid "Product Template"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,product_fleet_spec_ids:0
-msgid "Product fleet spec ids"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,radiator_side:0
-msgid "Radiator side"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,right:0
-msgid "Right"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,shoc:0
-msgid "SHOC"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,semi_direct_fit:0
-msgid "Semi direct fit"
 msgstr ""
 
 #. module: product_fleet_specification
@@ -259,22 +182,12 @@ msgid "Start Year"
 msgstr ""
 
 #. module: product_fleet_specification
-#: field:product.template,super_duty:0
-msgid "Super Duty"
+#: field:product.fleet.spec,spec_ids:0
+msgid "Vehicle Specification"
 msgstr ""
 
 #. module: product_fleet_specification
-#: field:product.template,w_02:0
-msgid "W/02"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,w_out:0
-msgid "W/OUT"
-msgstr ""
-
-#. module: product_fleet_specification
-#: field:product.template,y_pipe:0
-msgid "Y-pipe"
+#: field:product.template,product_fleet_spec_ids:0
+msgid "Vehicles"
 msgstr ""
 

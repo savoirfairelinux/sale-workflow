@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-12-05 22:05+0000\n"
-"PO-Revision-Date: 2014-12-05 22:05+0000\n"
+"POT-Creation-Date: 2015-01-21 19:29+0000\n"
+"PO-Revision-Date: 2015-01-21 19:29+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,44 +21,9 @@ msgid "(Update)"
 msgstr ""
 
 #. module: sale_order_line_product_selection
-#: field:product.selection,b2doors:0
-msgid "2 doors"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,b2x4:0
-msgid "2X4"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,b4doors:0
-msgid "4 doors"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,b4x4:0
-msgid "4X4"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,a_t:0
-msgid "A/T"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,awd:0
-msgid "AWD"
-msgstr ""
-
-#. module: sale_order_line_product_selection
 #: model:ir.actions.act_window,name:sale_order_line_product_selection.action_sale_order_line_product_selection
 #: view:sale.order:sale_order_line_product_selection.view_order_form
 msgid "Add Lines"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,back:0
-msgid "Back"
 msgstr ""
 
 #. module: sale_order_line_product_selection
@@ -106,38 +71,8 @@ msgid "Cylinders"
 msgstr ""
 
 #. module: sale_order_line_product_selection
-#: field:product.selection,dohc:0
-msgid "DOHC"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,emission_californien:0
-msgid "Emission Californien"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,emission_federal:0
-msgid "Emission Federal"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,engine_code:0
+#: field:product.selection,engine_code_id:0
 msgid "Engine Code"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,fwd:0
-msgid "FWD"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,firebreak_side:0
-msgid "Firebreak side"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,front:0
-msgid "Front"
 msgstr ""
 
 #. module: sale_order_line_product_selection
@@ -165,29 +100,9 @@ msgid "Last Updated on"
 msgstr ""
 
 #. module: sale_order_line_product_selection
-#: field:product.selection,left:0
-msgid "Left"
-msgstr ""
-
-#. module: sale_order_line_product_selection
 #: view:product.selection:sale_order_line_product_selection.view_product_selection_form
 #: field:product.selection,litre_id:0
 msgid "Litre"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,m_t:0
-msgid "M/T"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,manifold_alone:0
-msgid "Manifold alone"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,manifold_with_catalyzer:0
-msgid "Manifold with catalyzer"
 msgstr ""
 
 #. module: sale_order_line_product_selection
@@ -227,27 +142,12 @@ msgid "Product selection id"
 msgstr ""
 
 #. module: sale_order_line_product_selection
-#: field:product.selection,radiator_side:0
-msgid "Radiator side"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,right:0
-msgid "Right"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: field:product.selection,shoc:0
-msgid "SHOC"
-msgstr ""
-
-#. module: sale_order_line_product_selection
 #: field:product.selection,product_selection_line_ids:0
 msgid "Search Result"
 msgstr ""
 
 #. module: sale_order_line_product_selection
-#: code:addons/sale_order_line_product_selection/wizard/product_selection.py:203
+#: code:addons/sale_order_line_product_selection/wizard/product_selection.py:116
 #, python-format
 msgid "Select products from the result list"
 msgstr ""
@@ -258,18 +158,14 @@ msgid "Selected"
 msgstr ""
 
 #. module: sale_order_line_product_selection
-#: field:product.selection,super_duty:0
-msgid "Super Duty"
+#: view:product.selection:sale_order_line_product_selection.view_product_selection_form
+#: field:product.selection,spec_ids:0
+msgid "Specifications"
 msgstr ""
 
 #. module: sale_order_line_product_selection
 #: view:product.selection:sale_order_line_product_selection.view_product_selection_form
 #: field:product.selection,year:0
 msgid "Year"
-msgstr ""
-
-#. module: sale_order_line_product_selection
-#: view:product.selection:sale_order_line_product_selection.view_product_selection_form
-msgid "or"
 msgstr ""
 

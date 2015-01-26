@@ -11,63 +11,32 @@
           <group colspan="4" col="5">
             <group col="1">
               <label string="Brand"/>
-              <field name="brand_id" nolabel="1" boilerplate="Brand"/>
+              <field name="brand_id" nolabel="1" boilerplate="Brand" options="{'no_create_edit':'1'}"/>
             </group>
             <group col="1">
               <label string="Model"/>
-              <field name="model_id" nolabel="1" domain="[('brand_id', '=', brand_id)]"/>
+              <field name="model_id" nolabel="1" domain="[('brand_id', '=', brand_id)]" options="{'no_create_edit':'1'}"/>
             </group>
             <group col="1">
               <label string="Year"/>
-              <field name="year" nolabel="1"/>
+              <field name="year" nolabel="1" options="{'no_create_edit':'1'}"/>
             </group>
             <group col="1">
               <label string="Cylinders"/>
-              <field name="cylinder_id" nolabel="1"/>
+              <field name="cylinder_id" nolabel="1" options="{'no_create_edit':'1'}"/>
             </group>
             <group col="1">
               <label string="Litre"/>
-              <field name="litre_id" nolabel="1"/>
+              <field name="litre_id" nolabel="1" options="{'no_create_edit':'1'}"/>
             </group>
+          </group>
+          <group col="1">
+            <label string="Specifications"/>
+            <field name="spec_ids" widget="many2many_tags" nolabel="1" options="{'no_create_edit':'1'}"/>
           </group>
           <group colspan="4">
-            <field name="engine_code" />
+            <field name="engine_code_id"  options="{'no_create_edit':'1'}"/>
             <field name="default_code" />
-          </group>
-          <group>
-            <group>
-              <field name="back"/>
-              <field name="front"/>
-              <group colspan="2"/>
-              <field name="left"/>
-              <field name="right"/>
-              <group colspan="2"/>
-              <field name="a_t"/>
-              <field name="m_t"/>
-              <group colspan="2"/>
-              <field name="manifold_with_catalyzer"/>
-              <field name="manifold_alone"/>
-              <group colspan="2"/>
-              <field name="radiator_side" />
-              <field name="firebreak_side" />
-              <group colspan="2"/>
-              <field name="dohc" />
-              <field name="shoc" />
-            </group>
-            <group>
-              <field name="super_duty" />
-              <field name="b2x4" />
-              <field name="b4x4" />
-              <group colspan="2"/>
-              <field name="awd" />
-              <field name="fwd" />
-              <group colspan="2"/>
-              <field name="b2doors" />
-              <field name="b4doors" />
-              <group colspan="2"/>
-              <field name="emission_federal" />
-              <field name="emission_californien" />
-            </group>
           </group>
           <button name="update" string="(Update)" type="object" class="oe_link"/>
           <field name="product_selection_line_ids">

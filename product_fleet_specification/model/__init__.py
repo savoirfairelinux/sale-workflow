@@ -20,8 +20,12 @@
 #
 ##############################################################################
 
-from . import fleet_vehicle_litre
-from . import fleet_vehicle_cylinder
-from . import fleet_vehicle_enginecode
-from . import product_template
-from . import product_fleet_spec
+from . import (
+    fleet_vehicle_litre,
+    fleet_vehicle_cylinder,
+    fleet_vehicle_enginecode,
+    fleet_vehicle_spec,
+    fleet_vehicle_spec_category,
+    product_template,
+    product_fleet_spec,
+)

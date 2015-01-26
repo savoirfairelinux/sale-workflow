@@ -3,7 +3,7 @@
 ##############################################################################
 #
 #    OpenERP, Open Source Management Solution
-#    Copyright (C) 2014 Savoir-faire Linux (<www.savoirfairelinux.com>).
+#    Copyright (C) 2015 Savoir-faire Linux (<www.savoirfairelinux.com>).
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -23,23 +23,12 @@
 from openerp import models, fields
 
 
-class ProductFleetSpec(models.Model):
-    """Product Fleet Specification"""
+class FleetVehicleSpecCategory(models.Model):
+    """Fleet Vehicle Specification Category"""
 
-    _name = 'product.fleet.spec'
+    _name = 'fleet.vehicle.spec.category'
     _description = __doc__
 
     name = fields.Char('Name')
-    product_id = fields.Many2one('product.template', string='Product')
-    brand_id = fields.Many2one('fleet.vehicle.model.brand', string='Brand')
-    model_id = fields.Many2one('fleet.vehicle.model', string='Model')
-    year_start = fields.Char('Start Year', size=4)
-    year_end = fields.Char('End Year', size=4)
-    cylinder_id = fields.Many2one('fleet.vehicle.cylinder', string='Cylinder')
-    litre_id = fields.Many2one('fleet.vehicle.litre', string='Litre')
-    spec_ids = fields.Many2many(
-        'fleet.vehicle.spec',
-        string='Vehicle Specification')
-    engine_code_id = fields.Many2one(
-        'fleet.vehicle.enginecode',
-        string='Engine Code')
+
+    _order = 'name'

@@ -29,57 +29,9 @@ class ProductTemplate(models.Model):
 
     product_fleet_spec_ids = fields.One2many(
         'product.fleet.spec',
-        'product_id'
+        'product_id',
+        string='Vehicles',
     )
-    engine_code = fields.Many2many(
-        'fleet.vehicle.enginecode',
-        string='Engine Code'
-    )
-
-    back = fields.Boolean('Back')
-    front = fields.Boolean('Front')
-    
-    left = fields.Boolean('Left')
-    right = fields.Boolean('Right')
-    
-    a_t = fields.Boolean('A/T')
-    m_t = fields.Boolean('M/T')
-
-    y_pipe = fields.Boolean('Y-pipe')
-    
-    direct_fit = fields.Boolean('Direct fit')
-
-    radiator_side = fields.Boolean(
-        'Radiator side')
-    firebreak_side = fields.Boolean(
-        'Firebreak side')
-
-    dohc = fields.Boolean('DOHC')
-    shoc = fields.Boolean('SHOC')
-
-    manifold_with_catalyzer = fields.Boolean('Manifold with catalyzer')
-    manifold_alone = fields.Boolean('Manifold alone')
-    
-    super_duty = fields.Boolean('Super Duty')
-    b2x4 = fields.Boolean('2X4')
-    b4x4 = fields.Boolean('4X4')
-
-    awd = fields.Boolean('AWD')
-    fwd = fields.Boolean('FWD')
-
-    b2doors = fields.Boolean('2 doors')
-    b4doors = fields.Boolean('4 doors')
-
-    emission_federal = fields.Boolean('Emission Federal')
-    emission_californien = fields.Boolean('Emission Californien')
-
-    exc_calif = fields.Boolean('EXC CALIF')
-
-    catalyser2 = fields.Boolean('Catalyser (2)')
-    catalyser3 = fields.Boolean('Catalyser (3)')
-    catalyser4 = fields.Boolean('Catalyser (4)')
-
-    w_02 = fields.Boolean('W/02')
-    w_out = fields.Boolean('W/OUT')
-
-    semi_direct_fit = fields.Boolean('Semi direct fit')
+    global_spec_ids = fields.Many2many(
+        'fleet.vehicle.spec',
+        string='Global Specifications')
