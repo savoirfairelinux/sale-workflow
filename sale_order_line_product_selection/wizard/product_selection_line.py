@@ -20,9 +20,6 @@
 #
 ##############################################################################
 from openerp import models, fields, api
-from openerp.tools import DEFAULT_SERVER_DATE_FORMAT
-import time
-
 
 class product_selection_line(models.TransientModel):
 
