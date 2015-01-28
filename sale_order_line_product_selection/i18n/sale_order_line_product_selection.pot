@@ -71,7 +71,7 @@ msgid "Cylinders"
 msgstr ""
 
 #. module: sale_order_line_product_selection
-#: field:product.selection,engine_code_id:0
+#: field:product.selection,engine_code_ids:0
 msgid "Engine Code"
 msgstr ""
 

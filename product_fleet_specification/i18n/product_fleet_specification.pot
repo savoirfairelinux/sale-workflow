@@ -57,7 +57,7 @@ msgid "End Year"
 msgstr ""
 
 #. module: product_fleet_specification
-#: field:product.fleet.spec,engine_code_id:0
+#: field:product.fleet.spec,engine_code_ids:0
 msgid "Engine Code"
 msgstr ""
 

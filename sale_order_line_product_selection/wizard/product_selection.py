@@ -35,7 +35,7 @@ class product_selection(models.TransientModel):
     cylinder_id = fields.Many2one('fleet.vehicle.cylinder', string='Cylinders')
     litre_id = fields.Many2one('fleet.vehicle.litre', string='Litre')
 
-    engine_code_id = fields.Many2one(
+    engine_code_ids = fields.Many2many(
         'fleet.vehicle.enginecode',
         string='Engine Code'
     )
@@ -88,18 +88,17 @@ class product_selection(models.TransientModel):
         if self.litre_id:
             spec_query.append(('litre_id', '=', self.litre_id.id))
 
-        if self.engine_code_id:
-            spec_query.append(
-                ('engine_code_id', 'in', [self.engine_code_id.id, False]))
-        else:
-            spec_query.append(
-                ('engine_code_id', '=', False))
+        if not self.engine_code_ids:
+            spec_query.append(('engine_code_ids', '=', False))
 
         fleet_spec_ids += {
             spec.id for spec
             in self.env['product.fleet.spec'].search(spec_query)
             if (spec.spec_ids | spec.product_id.global_spec_ids)
             & self.spec_ids == self.spec_ids
+            and all(
+                code in self.engine_code_ids
+                for code in spec.engine_code_ids)
         }
 
         products = self.env['product.product'].search(

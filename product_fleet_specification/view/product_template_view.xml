@@ -19,7 +19,7 @@
                   <field name="spec_ids" widget="many2many_tags"/>
                   <field name="cylinder_id" />
                   <field name="litre_id" />
-                  <field name="engine_code_id"/>
+                  <field name="engine_code_ids" widget="many2many_tags"/>
                 </tree>
               </field>
               <label for="global_spec_ids"/>

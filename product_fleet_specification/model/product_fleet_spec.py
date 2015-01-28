@@ -40,6 +40,6 @@ class ProductFleetSpec(models.Model):
     spec_ids = fields.Many2many(
         'fleet.vehicle.spec',
         string='Vehicle Specification')
-    engine_code_id = fields.Many2one(
+    engine_code_ids = fields.Many2many(
         'fleet.vehicle.enginecode',
         string='Engine Code')
