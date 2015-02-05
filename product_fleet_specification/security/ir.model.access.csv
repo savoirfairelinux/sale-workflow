@@ -3,3 +3,5 @@ access_fleet_vehicle_litre,access_fleet_vehicle_litre,model_fleet_vehicle_litre,
 access_product_fleet_spec,access_product_fleet_spec,model_product_fleet_spec,,1,1,1,1
 access_fleet_vehicle_cylinder,access_fleet_vehicle_cylinder,model_fleet_vehicle_cylinder,,1,1,1,1
 access_fleet_vehicle_enginecode,access_fleet_vehicle_enginecode,model_fleet_vehicle_enginecode,,1,1,1,1
+access_fleet_vehicle_spec,access_fleet_vehicle_spec,model_fleet_vehicle_spec,,1,1,1,1
+access_fleet_vehicle_spec_category,access_fleet_vehicle_spec_category,model_fleet_vehicle_spec_category,,1,1,1,1
