@@ -16,17 +16,10 @@
                   <field name="model_id" domain="[('brand_id', '=', brand_id)]" options="{'create_name_field': 'modelname'}" context="{'default_brand_id': brand_id}"/>
                   <field name="year_start" />
                   <field name="year_end" />
-                  <field name="spec_ids" widget="many2many_tags"/>
+                  <field name="app_id"/>
                   <field name="cylinder_id" />
                   <field name="litre_id" />
                   <field name="engine_code_ids" widget="many2many_tags"/>
-                </tree>
-              </field>
-              <label for="global_spec_ids"/>
-              <field name="global_spec_ids">
-                <tree>
-                  <field name="name"/>
-                  <field name="category_id"/>
                 </tree>
               </field>
             </page>

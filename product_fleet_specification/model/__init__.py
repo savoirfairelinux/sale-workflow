@@ -23,9 +23,6 @@
 from . import (
     fleet_vehicle_litre,
     fleet_vehicle_cylinder,
-    fleet_vehicle_enginecode,
-    fleet_vehicle_spec,
-    fleet_vehicle_spec_category,
     product_template,
     product_fleet_spec,
 )

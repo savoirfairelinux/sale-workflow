@@ -32,6 +32,3 @@ class ProductTemplate(models.Model):
         'product_id',
         string='Vehicles',
     )
-    global_spec_ids = fields.Many2many(
-        'fleet.vehicle.spec',
-        string='Global Specifications')

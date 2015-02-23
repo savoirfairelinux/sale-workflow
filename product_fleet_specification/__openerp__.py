@@ -47,7 +47,6 @@ Contributors
         'data/fleet_vehicle_cylinder_data.xml',
         'data/fleet_vehicle_litre_data.xml',
         'view/product_template_view.xml',
-        'view/fleet_vehicle_spec_view.xml',
     ],
     'test': [],
     'demo': [],
