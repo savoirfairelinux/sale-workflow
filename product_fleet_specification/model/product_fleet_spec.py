@@ -37,4 +37,4 @@ class ProductFleetSpec(models.Model):
     year_end = fields.Char('End Year', size=4)
     cylinder_id = fields.Many2one('fleet.vehicle.cylinder', string='Cylinder')
     litre_id = fields.Many2one('fleet.vehicle.litre', string='Litre')
-    app_id = fields.Text('Application')
+    application = fields.Text('Application')

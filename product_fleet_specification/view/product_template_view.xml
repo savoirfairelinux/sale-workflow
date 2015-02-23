@@ -16,10 +16,9 @@
                   <field name="model_id" domain="[('brand_id', '=', brand_id)]" options="{'create_name_field': 'modelname'}" context="{'default_brand_id': brand_id}"/>
                   <field name="year_start" />
                   <field name="year_end" />
-                  <field name="app_id"/>
+                  <field name="application"/>
                   <field name="cylinder_id" />
                   <field name="litre_id" />
-                  <field name="engine_code_ids" widget="many2many_tags"/>
                 </tree>
               </field>
             </page>

@@ -21,6 +21,7 @@
 ##############################################################################
 from openerp import models, fields, api
 
+
 class product_selection_line(models.TransientModel):
 
     _name = 'product.selection.line'
@@ -38,8 +39,12 @@ class product_selection_line(models.TransientModel):
     is_selected = fields.Boolean('Selected')
     product_id = fields.Many2one('product.product', string='Product')
     pricelist_id = fields.Many2one('product.pricelist')
-    default_code = fields.Char(related='product_id.default_code', store=True)
     standard_price = fields.Float(
         related='product_id.standard_price', store=True)
     list_price = fields.Float(
         compute=_list_price, string="Sale Price")
+    spec_id = fields.Many2one(
+        'product.fleet.spec', string='Specification')
+
+    application = fields.Text(
+        'Application', related='spec_id.application', store=True)

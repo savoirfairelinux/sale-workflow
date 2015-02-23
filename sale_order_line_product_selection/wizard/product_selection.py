@@ -45,8 +45,6 @@ class product_selection(models.TransientModel):
     def update(self):
         self.write({'product_selection_line_ids': [(5, 0, 0)]})
 
-        fleet_spec_ids = []
-
         spec_query = []
 
         if self.model_id:
@@ -78,20 +76,30 @@ class product_selection(models.TransientModel):
         if self.litre_id:
             spec_query.append(('litre_id', '=', self.litre_id.id))
 
-        fleet_spec_ids += {
-            spec.id for spec
-            in self.env['product.fleet.spec'].search(spec_query)
-        }
+        fleet_spec_ids = self.env['product.fleet.spec'].search(spec_query).ids
 
         products = self.env['product.product'].search(
             [('product_fleet_spec_ids.id', 'in', fleet_spec_ids)])
 
-        if products:
-            vals = {
+        product_dict = {
+            product.id: product.product_fleet_spec_ids.filtered(
+                lambda spec: spec.id in fleet_spec_ids)
+            for product in products
+        }
+
+        selection_lines = []
+        for product_id in product_dict:
+            for spec in product_dict[product_id]:
+                selection_lines.append((product_id, spec.id))
+
+        if product_dict:
+            self.write({
                 'product_selection_line_ids': [
-                    (0, 0, {'product_id': p}) for p in products.ids]
-            }
-            self.write(vals)
+                    (0, 0, {
+                        'product_id': line[0],
+                        'spec_id': line[1],
+                    }) for line in selection_lines]
+            })
 
         return {
             'name': _('Select products from the result list'),
@@ -106,6 +114,7 @@ class product_selection(models.TransientModel):
 
     @api.one
     def confirm(self):
+        self._check_product_selected_once()
         vals = [
             (0, 0, {
                 'product_id': line.product_id.id,
@@ -118,3 +127,23 @@ class product_selection(models.TransientModel):
         so.write({'order_line': vals})
 
         return {'type': 'ir.actions.act_window_close'}
+
+    @api.one
+    def _check_product_selected_once(self):
+        """
+        Check that every product is selected maximum one time
+        Otherwise, unselected redundant
+        """
+        product_ids = set()
+        unselect_line_ids = []
+        selected_lines = self.product_selection_line_ids.filtered(
+            lambda line: line.is_selected)
+
+        for line in selected_lines:
+            if line.product_id.id in product_ids:
+                unselect_line_ids.append(line.id)
+            else:
+                product_ids.add(line.product_id.id)
+
+        self.env['product.selection.line'].browse(unselect_line_ids).write(
+            {'is_selected': False})

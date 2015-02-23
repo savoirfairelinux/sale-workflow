@@ -35,7 +35,7 @@
             <tree editable="top" create="0">
               <field name="is_selected" />
               <field name="product_id" readonly="1" />
-              <field name="default_code" readonly="1" />
+              <field name="application" readonly="1"/>
               <field name="standard_price" readonly="1" />
               <field name="list_price" readonly="1" />
             </tree>
