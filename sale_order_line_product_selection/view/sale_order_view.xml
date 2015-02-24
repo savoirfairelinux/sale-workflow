@@ -22,6 +22,7 @@
                 name="%(action_sale_order_line_product_selection)s"
                 type="action"
                 icon="fa-flask"
+                states="draft,sent"
                 context="{'default_partner_id': partner_id, 'default_pricelist_id': pricelist_id}"
                 string="Add Lines" />
           </div>
