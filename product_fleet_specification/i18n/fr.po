@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2015-02-24 17:02+0000\n"
-"PO-Revision-Date: 2015-02-24 12:13-0500\n"
+"PO-Revision-Date: 2015-02-24 12:12-0500\n"
 "Last-Translator: <>\n"
 "Language-Team: Savoir-faire Linux <info@savoirfairelinux.com>\n"
 "MIME-Version: 1.0\n"
@@ -19,36 +19,36 @@ msgstr ""
 #. module: product_fleet_specification
 #: field:product.fleet.spec,application:0
 msgid "Application"
-msgstr ""
+msgstr "Application"
 
 #. module: product_fleet_specification
 #: field:product.fleet.spec,brand_id:0
 msgid "Brand"
-msgstr ""
+msgstr "Marque"
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,create_uid:0
 #: field:fleet.vehicle.litre,create_uid:0
 #: field:product.fleet.spec,create_uid:0
 msgid "Created by"
-msgstr ""
+msgstr "Créé par"
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,create_date:0
 #: field:fleet.vehicle.litre,create_date:0
 #: field:product.fleet.spec,create_date:0
 msgid "Created on"
-msgstr ""
+msgstr "Créé le"
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,name:0 field:product.fleet.spec,cylinder_id:0
 msgid "Cylinder"
-msgstr ""
+msgstr "Cylindre"
 
 #. module: product_fleet_specification
 #: field:product.fleet.spec,year_end:0
 msgid "End Year"
-msgstr ""
+msgstr "Année Fin"
 
 #. module: product_fleet_specification
 #: model:ir.model,name:product_fleet_specification.model_fleet_vehicle_cylinder
@@ -84,62 +84,62 @@ msgstr ""
 #. module: product_fleet_specification
 #: view:product.template:product_fleet_specification.product_template_form_view
 msgid "Information"
-msgstr ""
+msgstr "Information"
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,write_uid:0
 #: field:fleet.vehicle.litre,write_uid:0 field:product.fleet.spec,write_uid:0
 msgid "Last Updated by"
-msgstr ""
+msgstr "Dernière mise à jour par"
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.cylinder,write_date:0
 #: field:fleet.vehicle.litre,write_date:0
 #: field:product.fleet.spec,write_date:0
 msgid "Last Updated on"
-msgstr ""
+msgstr "Dernière mise à jour le"
 
 #. module: product_fleet_specification
 #: field:product.fleet.spec,litre_id:0
 msgid "Litre"
-msgstr ""
+msgstr "Litre"
 
 #. module: product_fleet_specification
 #: field:product.fleet.spec,model_id:0
 msgid "Model"
-msgstr ""
+msgstr "Modèle"
 
 #. module: product_fleet_specification
 #: field:fleet.vehicle.litre,name:0 field:product.fleet.spec,name:0
 msgid "Name"
-msgstr ""
+msgstr "Nom"
 
 #. module: product_fleet_specification
 #: field:product.fleet.spec,product_id:0
 msgid "Product"
-msgstr ""
+msgstr "Produit"
 
 #. module: product_fleet_specification
 #: model:ir.model,name:product_fleet_specification.model_product_fleet_spec
 msgid "Product Fleet Specification"
-msgstr ""
+msgstr "Spécification véhicule"
 
 #. module: product_fleet_specification
 #: model:ir.model,name:product_fleet_specification.model_product_template
 msgid "Product Template"
-msgstr ""
+msgstr "Modèle de produit"
 
 #. module: product_fleet_specification
 #: view:product.template:product_fleet_specification.product_template_form_view
 msgid "Specification"
-msgstr ""
+msgstr "Spécification"
 
 #. module: product_fleet_specification
 #: field:product.fleet.spec,year_start:0
 msgid "Start Year"
-msgstr ""
+msgstr "Année Début"
 
 #. module: product_fleet_specification
 #: field:product.template,product_fleet_spec_ids:0
 msgid "Vehicles"
-msgstr ""
+msgstr "Véhicules"
