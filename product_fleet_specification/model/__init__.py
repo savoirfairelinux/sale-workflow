@@ -25,5 +25,4 @@ from . import (
     fleet_vehicle_cylinder,
     product_template,
     product_fleet_spec,
-    product_product,
 )
