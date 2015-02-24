@@ -19,7 +19,7 @@ msgstr ""
 #. module: sale_order_line_product_selection
 #: view:product.selection:sale_order_line_product_selection.view_product_selection_form
 msgid "(Update)"
-msgstr "Raffraichir"
+msgstr "Rafraichir"
 
 #. module: sale_order_line_product_selection
 #: model:ir.actions.act_window,name:sale_order_line_product_selection.action_sale_order_line_product_selection
